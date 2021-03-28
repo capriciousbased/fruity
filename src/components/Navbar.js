@@ -1,14 +1,12 @@
 import React from "react";
-import { fade, makeStyles} from "@material-ui/core/styles";
+import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-
-
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  appColor:{
-    backgroundColor:"#ffcccb",
+  appColor: {
+    backgroundColor: "#ffcccb",
   },
   title: {
     flexGrow: 1,
@@ -28,18 +26,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   search: {
-    position: 'relative',
+    position: "relative",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
+    "&:hover": {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginRight: theme.spacing(2),
     marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
-      width: 'auto',
+      width: "auto",
     },
   },
   searchIcon: {
@@ -70,7 +68,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar(props) {
-
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -85,15 +82,13 @@ function Navbar(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Fruity
           </Typography>
-          <Tabs value={value}
-        onChange={handleChange} >
-              <Tab label="All"  indicatorColor='primary'/>
-              <Tab label="Dried"/>
-              <Tab label="Fresh"/>
-              <Tab label="Fruits"/>
-              <Tab label="Exotic"/>
-              <Tab label="Nuts"/>
-    
+          <Tabs value={value} onChange={handleChange}>
+            <Tab label="All" />
+            <Tab label="Dried" />
+            <Tab label="Fresh" />
+            <Tab label="Fruits" />
+            <Tab label="Exotic" />
+            <Tab label="Nuts" />
           </Tabs>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

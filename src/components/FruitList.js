@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import FruitCard from "./FruitCard";
 
+const base_url = "https://api.predic8.de";
+
 const FruitList = () => {
   const [fruits, setFruits] = useState([]);
 
   const getFruits = async () => {
     const res = await fetch("https://api.predic8.de/shop/products/?limit=10");
     const data = await res.json();
+
+    console.log(data);
 
     function createFruitsObject(products) {
       products.forEach(async (fruit) => {
@@ -16,6 +20,7 @@ const FruitList = () => {
       });
     }
     createFruitsObject(data.products);
+    console.log(data.products);
   };
 
   useEffect(() => {
@@ -30,7 +35,7 @@ const FruitList = () => {
           {fruits.map((fruitState, index) => (
             <FruitCard
               key={index}
-              image={fruitState.photo_url}
+              image={`${base_url}${fruitState.photo_url}`}
               name={fruitState.name}
               price={fruitState.price}
             />
