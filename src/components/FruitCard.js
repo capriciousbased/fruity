@@ -4,17 +4,22 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 230,
   },
-  gridContainer: {
-    paddingLeft: "40px",
-    paddingRight: "40px",
-    paddingBottom: "30px",
 
+  media: {
+    height: 140,
+    width: 200,
+    alignItems:'center',
+  },
+  gridContainer: {
+    paddingLeft: "20px",
+    paddingRight: "0px",
+    paddingBottom: "30px",
   },
   bullet: {
     display: "inline-block",
@@ -33,32 +38,28 @@ const FruitsCard = ({ image, name, price, _callback }) => {
   const classes = useStyles();
 
   return (
-    <Grid
-      container
-      spacing={4}
-      xs={12} sm={6} md={3}
-      
-      className={classes.gridContainer}
-      justify="center"
-    >
-      <Grid item >
-        <Card className={classes.root} variant="outlined">
-        <CardContent>
-            <CardMedia
-              component="img"
-              className={classes.cardMedia}
-              image={image}
-              alt={name}
-              style={{ width: "180px", height: "180px" }}
-            />
-              <Typography className={classes.title}color="textSecondary" gutterBottom>
-                <h3>{name}</h3>
-                <p>Price: {price} €</p>
+    <Container>
+      <Grid container className={classes.gridContainer}>
+        <Grid item xs={12}>
+          <Card>
+            <CardContent>
+              <CardMedia
+                component="img"
+                image={image}
+                alt={name}
+                className={classes.media}
+              />
+              <Typography className={classes.title} color="textSecondary">
+                {name}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Price: {price} €
               </Typography>
             </CardContent>
-        </Card>
+          </Card>
+        </Grid>
       </Grid>
-    </Grid>
+    </Container>
   );
 };
 
