@@ -8,11 +8,16 @@ import ProductTabContent from "./ProductTabContent";
 import "./ProductsTabBar.module.css";
 
 const useStyles = makeStyles((theme) => ({
-  demo2: {
-    backgroundColor: "#009879",
+  tableContent: {
+    backgroundColor: "#616161",
     width: "60%",
     margin: "auto",
     color: "white",
+    textAlign:"center",
+   marginTop:0,
+   marginBottom:60,
+    
+    
   },
   table: {
     width: "60%",
@@ -62,8 +67,8 @@ const ProductsTabBar = (props) => {
       {isLoading ? (
         <h1>Loading....</h1>
       ) : (
-        <div className={classes.demo2}>
-          <Tabs onChange={handleTabs} value={tabValue} variant="standard">
+        <div className={classes.tableContent}>
+          <Tabs onChange={handleTabs} value={tabValue} variant="scrollable">
             {allCategories.map((category, index) => {
               return <Tab label={category.name} key={index}></Tab>;
             })}

@@ -1,26 +1,12 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from "prop-types";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
-import Home from "../Home";
 import ProductsTabBar from "./ProductListTab/ProductsTabBar";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -33,7 +19,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box p={2}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -55,14 +41,13 @@ function a11yProps(index) {
 }
 
 export default function NavBar(props) {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-    <div className={classes.root}>
+    <div>
       <AppBar position="static">
         <Tabs
           value={value}
@@ -74,7 +59,6 @@ export default function NavBar(props) {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ProductsTabBar />

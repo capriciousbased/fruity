@@ -1,6 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import "./AvailableProducts.css";
+import { Link } from "react-router-dom";
 
 const ProductCard = (props) => {
   const { searchTerm, products, url } = props;
@@ -30,17 +31,19 @@ const ProductCard = (props) => {
         .map((product, index) => {
           return (
             <div className="productCard" key={index}>
-              <img
-                src={url + product.photo_url}
-                className="productImage"
-                alt="not available"
-              />
-              <div className="text">
-                <div className="first">
-                  <h2>{product.name}</h2>
-                  <p>Price: {product.price} € </p>
+              <Link to={`products/${product.id}`}>
+                <img
+                  src={url + product.photo_url}
+                  className="productImage"
+                  alt="not available"
+                />
+                <div className="text">
+                  <div className="first">
+                    <h2>{product.name}</h2>
+                    <p>Price: {product.price} € </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}

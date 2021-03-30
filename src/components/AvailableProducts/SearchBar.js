@@ -5,8 +5,8 @@ import "./AvailableProducts.css";
 
 const SearchBar = (props) => {
   return (
-    <div>
-      <AppBar position="static" color="inherit">
+    <div className="search_nav">
+      <AppBar position="static" color='primary'>
         <Toolbar>
           <input
             className="searchBar"
