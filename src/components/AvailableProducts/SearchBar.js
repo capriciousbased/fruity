@@ -6,7 +6,7 @@ import "./AvailableProducts.css";
 const SearchBar = (props) => {
   return (
     <div className="search_nav">
-      <AppBar position="static" color='primary'>
+      <AppBar position="static" color="secondary">
         <Toolbar>
           <input
             className="searchBar"

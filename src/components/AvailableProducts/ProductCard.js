@@ -31,19 +31,17 @@ const ProductCard = (props) => {
         .map((product, index) => {
           return (
             <div className="productCard" key={index}>
-              <Link to={`products/${product.id}`}>
-                <img
-                  src={url + product.photo_url}
-                  className="productImage"
-                  alt="not available"
-                />
-                <div className="text">
-                  <div className="first">
-                    <h2>{product.name}</h2>
-                    <p>Price: {product.price} € </p>
-                  </div>
+              <img
+                src={url + product.photo_url}
+                className="productImage"
+                alt="not available"
+              />
+              <div className="text">
+                <div className="first">
+                  <h2>{product.name}</h2>
+                  <p>Price: {product.price} € </p>
                 </div>
-              </Link>
+              </div>
             </div>
           );
         })}
