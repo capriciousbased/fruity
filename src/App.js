@@ -3,7 +3,6 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { purple } from "@material-ui/core/colors";
 import Home from "./Home";
 import NavBar from "./components/NavBar";
-import ProductsTabBar from "./components/ProductListTab/ProductsTabBar";
 
 const theme = createMuiTheme({
   palette: {
