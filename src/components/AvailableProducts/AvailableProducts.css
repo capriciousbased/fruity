@@ -1,0 +1,87 @@
+.table {
+  text-align: center;
+  margin: auto;
+}
+
+.contentTable {
+  border-collapse: collapse;
+  margin: 20px auto;
+  min-width: 400px;
+  width: 50%;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.contentTable th,
+.contentTable tr {
+  padding: 12px 15px;
+}
+
+thead tr {
+  color: #ffffff;
+  background-color: #009879;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+tbody tr {
+  text-align: left;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.allCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.productCard {
+  width: 300px;
+  height: 350px;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 15px;
+  padding-top: 2%;
+  text-align: center;
+}
+
+.productImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 25%;
+  align-self: center;
+}
+
+.first {
+  background-color: lightgray;
+  width: 100%;
+
+  
+}
+
+.text{
+  font-size: 14px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.search{
+  background-color: rgb(121, 148, 184);
+}
+.searchBar {
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  align-self: center;
+}

@@ -1,23 +1,23 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './components/Home'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
-import { purple } from '@material-ui/core/colors'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { purple } from "@material-ui/core/colors";
+import Home from "./Home";
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#fefefe'
+      main: "#fefefe",
     },
-    secondary: purple
+    secondary: purple,
   },
   typography: {
-    fontFamily: 'Quicksand',
+    fontFamily: "Quicksand",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
     fontWeightBold: 700,
-  }
-})
+  },
+});
 
 function App() {
   return (
