@@ -7,7 +7,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import Home from "../Home";
-import CategoriesTable from "./AllProducts/CategoriesTable";
+import ProductsTabBar from "./ProductListTab/ProductsTabBar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +77,7 @@ export default function NavBar(props) {
         <Home />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <CategoriesTable />
+        <ProductsTabBar />
       </TabPanel>
     </div>
   );
