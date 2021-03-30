@@ -4,7 +4,6 @@ import { purple } from "@material-ui/core/colors";
 import Home from "./Home";
 import NavBar from "./components/NavBar";
 import ProductsTabBar from "./components/ProductListTab/ProductsTabBar";
-import ProductDetails from "./components/ProductsDetails";
 
 const theme = createMuiTheme({
   palette: {
@@ -28,15 +27,9 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route exact path="/">
+          <Route>
             <Home />
           </Route>
-          <Route exact path="/productsTab">
-            <ProductsTabBar />
-          </Route>
-          <Route path="/products/:id">
-          <ProductDetails />
-        </Route>
         </Switch>
       </Router>
     </ThemeProvider>

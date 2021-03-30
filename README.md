@@ -1,11 +1,9 @@
-
 ### Built With
 
 For This beautiful website we used following dependencies or framework.
 
 - [React](https://reactjs.org/)
 - [Material-ui](https://material-ui.com/)
-
 
 <!-- GETTING STARTED -->
 
@@ -50,4 +48,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Md Anisul Hoque Khan - [@linkedin](https://www.linkedin.com/in/anisulkhan/) - mdkhan@gmx.de
-

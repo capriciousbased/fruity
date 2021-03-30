@@ -58,8 +58,7 @@ export default function NavBar(props) {
           <Tab label="All Products" {...a11yProps(1)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-      </TabPanel>
+      <TabPanel value={value} index={0}></TabPanel>
       <TabPanel value={value} index={1}>
         <ProductsTabBar />
       </TabPanel>
